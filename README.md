@@ -1,1 +1,0 @@
-# jogo-cartas-yu-gi-oh
