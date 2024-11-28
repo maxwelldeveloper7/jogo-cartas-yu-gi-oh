@@ -83,9 +83,10 @@
 }
 
 .card-versus__container {
-    margin-top: 2rem;
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    align-content: center;
     padding-top: .1rem;
     height: 300px;
 }
@@ -105,7 +106,7 @@
 }
 
 .card-box {
-    height: 10rem;
+    height: 12rem;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -125,4 +126,8 @@
 
 .card:hover {
     transform: scale(1.2);
+}
+
+.debug {
+    border: 1px solid red;
 }
