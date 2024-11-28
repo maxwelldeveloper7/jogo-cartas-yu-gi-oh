@@ -86,7 +86,7 @@ async function setCardsField(cardId) {
     await removeAllCardsImages();
     let computerCardId = await getRandomCardId();
     state.fieldCards.player.style.display = "block";
-    state.fieldCards.computer.style.display = "block";
+    state.fieldCards.computer.style.display = "block";   
 
     state.fieldCards.player.src = cardData[cardId].img;
     state.fieldCards.computer.src = cardData[computerCardId].img;
@@ -153,8 +153,9 @@ async function resetDuel() {
     state.cardSprites.avatar.src = "";
     state.actions.button.style.display = "none";
 
-    state.fieldCards.player.style.display = "none";
-    state.fieldCards.computer.style.display = "none";
+    state.cardSprites.name.innerText = ""
+    state.cardSprites.type.innerText = "Escolha uma Carta"
+    state.cardSprites.avatar.src = ""
 
     init();
 }
@@ -165,6 +166,9 @@ async function playAudio(status) {
 }
 
 function init() {
+
+    state.fieldCards.player.style.display = "none"
+    state.fieldCards.computer.style.display = "none"
     drawCards(5, playerSides.player1);
     drawCards(5, playerSides.computer);
 }
